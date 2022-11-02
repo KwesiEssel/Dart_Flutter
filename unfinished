@@ -1,0 +1,50 @@
+import 'dart:html';
+
+import 'package:flutter/material.dart';
+import 'categorylist.dart';
+
+void main() {
+  runApp(MyApp(title: 'T',));
+}
+
+class MyApp extends StatelessWidget {
+  final String title;
+
+  const MyApp({Key? key, required this.title}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        drawer: Categorylist(),
+        appBar: AppBar(
+          title: Text("Project22"),
+          leading: GestureDetector(
+            onTap: () {
+              /* Write listener code here */
+            },
+            child: Icon(
+              Icons.menu, // add custom icons also
+            ),
+          ),
+          actions: <Widget>[
+            Padding(
+                padding: EdgeInsets.only(right: 20.0),
+                child: GestureDetector(
+                  onTap: () {},
+                  child: Icon(
+                    Icons.search,
+                    size: 26.0,
+                  ),
+                )),
+            Padding(
+                padding: EdgeInsets.only(right: 20.0),
+                child: GestureDetector(
+                  onTap: () {},
+                  child: Icon(Icons.more_vert),
+                )),
+          ],
+        ),
+      ),
+    );
+  }
+}
