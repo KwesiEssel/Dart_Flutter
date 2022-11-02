@@ -4,18 +4,15 @@ import 'package:flutter/material.dart';
 import 'categorylist.dart';
 
 void main() {
-  runApp(MyApp(title: 'T',));
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final String title;
 
-  const MyApp({Key? key, required this.title}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        drawer: Categorylist(),
         appBar: AppBar(
           title: Text("Project22"),
           leading: GestureDetector(
