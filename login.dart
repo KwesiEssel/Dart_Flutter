@@ -17,6 +17,11 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Icon(
+                    Icons.account_box_outlined,
+                  size: 100,
+                ),
+
             //
             Text(
                 'Hello my football friend',
