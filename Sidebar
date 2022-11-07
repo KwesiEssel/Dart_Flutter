@@ -1,0 +1,61 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_slider_drawer/flutter_slider_drawer.dart';
+
+
+class Sidebar extends StatelessWidget {
+  const Sidebar({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+      ),
+      // Drawer ist die Funktion für die Sidebar
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+
+            // Überschrift in der kategorie
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+              child: Text('Category'),
+            ),
+
+            //Categories, ListTile listet auf
+            ListTile(title: const Text('Category 1'),
+            onTap: () {
+
+            },
+            ),
+            ListTile(title: const Text('Category 2'),
+              onTap: () {
+
+              },
+            ),
+            ListTile(title: const Text('Category 3'),
+              onTap: () {
+
+              },
+            ),
+            ListTile(title: const Text('Category 4'),
+              onTap: () {
+
+              },
+            ),
+
+            ListTile(title: const Text('Category 5'),
+              onTap: () {
+
+              },
+            ),
+          ],
+        ),
+
+      )
+
+    );
+  }
+}
